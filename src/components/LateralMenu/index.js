@@ -5,7 +5,7 @@ import Colors from '../../../styles/Colors';
 
 const LateralMenu = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerContent}>
           <Image
@@ -67,6 +67,11 @@ const LateralMenu = ({navigation}) => {
 export default LateralMenu;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+  },
   header: {
     backgroundColor: Colors.headerMenu,
     borderBottomWidth: 1,
@@ -93,8 +98,10 @@ const styles = StyleSheet.create({
     marginLeft: 7,
   },
   buttonSection: {
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     marginTop: 20,
+    width: 300,
+    flexGrow: 1,
   },
   button: {
     flexDirection: 'row',
@@ -117,8 +124,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   newGame: {
-    marginTop: 300,
-    justifyContent: 'center',
+    width: 300,
   },
   newGameButton: {
     backgroundColor: 'rgba(232, 65, 24, 0.5)',
